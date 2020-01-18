@@ -1,0 +1,37 @@
+<div fxLayout="column" fxFlex style="margin: 12px 24px 0px 24px;">
+  <form [formGroup]="todoForm" fxLayout="row" fxFlex>
+    <div fxFlex="25">
+      <mat-form-field>
+        <input matInput formControlName="f1" />
+      </mat-form-field>
+    </div>
+    <div fxFlex="25">
+      <mat-form-field>
+        <input matInput formControlName="f2" />
+      </mat-form-field>
+    </div>
+    <div fxFlex="25">
+      <mat-form-field>
+        <input matInput formControlName="f3" />
+      </mat-form-field>
+    </div>
+    <div fxFlex="25">
+      <button mat-raised-button color="warn" (click)="closePage()">
+        <mat-icon>
+          close
+        </mat-icon>
+      </button>
+    </div>
+  </form>
+  <div fxLayout="row" fxFlex>
+    <div fxFlex="25">
+      <p>status form : {{ this.todoForm.get('f1').pristine }}</p>
+    </div>
+    <div fxFlex="25">
+      <p>status form : {{ this.todoForm.get('f2').pristine }}</p>
+    </div>
+    <div fxFlex="25">
+      <p>status form : {{ this.todoForm.get('f3').pristine }}</p>
+    </div>
+  </div>
+</div>

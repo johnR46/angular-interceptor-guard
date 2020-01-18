@@ -1,0 +1,16 @@
+app-root {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+router-outlet {
+  * + {
+    flex-direction: column;
+    display: flex;
+    flex-grow: 1;
+  }
+}
